@@ -1,12 +1,11 @@
-# Trabalho2_Karllyane
 
 # Trabalho2_Karllyane
-
 **Disciplina: Redes de Computadores**
 
-**Curso: Engenharia de Computação / Elétrica**
+**Curso: Engenharia de Computação / Elétrica** 
 
-**Nome/RA: Karllyane da Rocha Santos
+
+**Nome/RA:Karllyane da Rocha Santos/2187973**
 
 
 ## Tarefa 1:  Sub-Redes
