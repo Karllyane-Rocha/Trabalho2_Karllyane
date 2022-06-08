@@ -1,0 +1,115 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+security passwords min-length 10
+!
+hostname r-cv-KR
+!
+login block-for 120 attempts 3 within 60
+!
+!
+enable secret 5 $1$mERr$FsTiE8KWEKmDl3hMvs57h/
+!
+!
+!
+!
+!
+!
+ip cef
+ipv6 unicast-routing
+!
+no ipv6 cef
+!
+!
+!
+username karllyane secret 5 $1$mERr$F5V/u2120qbEqnDJcxLe00
+!
+!
+license udi pid CISCO2811/K9 sn FTX1017SR8M-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip domain-name karllyane.rocha.com.br
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ description filial2
+ ip address 200.200.73.97 255.255.255.224
+ duplex auto
+ speed auto
+ ipv6 address FE80::1 link-local
+ ipv6 address 2001:DB8:ACAD:7302::1/64
+!
+interface FastEthernet0/1
+ description cv-ita
+ ip address 200.200.73.242 255.255.255.252
+ duplex auto
+ speed auto
+ ipv6 address FE80::1 link-local
+ ipv6 address 2001:DB8:ACAD:73FF::4:2/112
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+ip route 200.200.73.0 255.255.255.192 200.200.73.241 
+ip route 200.200.73.64 255.255.255.224 200.200.73.241 
+ip route 200.200.73.224 255.255.255.252 200.200.73.241 
+ip route 200.200.73.228 255.255.255.252 200.200.73.241 
+ip route 200.200.73.232 255.255.255.252 200.200.73.241 
+ip route 200.200.73.236 255.255.255.252 200.200.73.241 
+!
+ip flow-export version 9
+!
+ipv6 route 2001:DB8:ACAD:7300::/64 2001:DB8:ACAD:FF::4:1
+ipv6 route 2001:DB8:ACAD:7301::/64 2001:DB8:ACAD:73FF::4:1
+ipv6 route 2001:DB8:ACAD:73FF::/112 2001:DB8:ACAD:73FF::4:1
+ipv6 route 2001:DB8:ACAD:73FF::1:0/112 2001:DB8:ACAD:73FF::4:1
+ipv6 route 2001:DB8:ACAD:73FF::2:0/112 2001:DB8:ACAD:73FF::4:1
+ipv6 route 2001:DB8:ACAD:73FF::3:0/112 2001:DB8:ACAD:73FF::4:1
+!
+ip access-list extended sl_def_acl
+ deny tcp any any eq telnet
+ deny tcp any any eq www
+ deny tcp any any eq 22
+ permit tcp any any eq 22
+!
+no cdp run
+!
+banner motd # Roteador  Coronel Vivida  ATENCAO Acesso Restrito a pessoas autorizadas!Administrador: Karllyane da Rocha Santos (karllyane.rocha.com.br)#
+!
+!
+!
+!
+!
+line con 0
+ password @Cons-karllyane
+ login
+!
+line aux 0
+!
+line vty 0 4
+ exec-timeout 5 0
+ login local
+ transport input ssh
+!
+!
+!
+end
+
