@@ -1,4 +1,3 @@
-
 # Trabalho2_Karllyane
 **Disciplina: Redes de Computadores**
 
@@ -119,7 +118,7 @@
 | 200.200.73.64  | 255.255.255.224 | 200.200.73.238 | Se0/0/0 | 
 | 200.200.73.224 | 255.255.255.252 | 200.200.73.238 | Se0/0/0 | 
 | 200.200.73.228 | 255.255.255.252 | 200.200.73.238 | Se0/0/0 | 
-| 200.200.73.96  | 255.255.255.224 | 200.200.73.238 | Fa0/1 |
+| 200.200.73.96  | 255.255.255.224 | 200.200.73.242 | Fa0/1 |
 #### IPv6
 | Rede de Destino/Prefixo      | Next Hop      | Interface de Saída |
 |------------------------------|---------------|--------------------|
@@ -144,7 +143,7 @@
 #### IPv6
 | Rede de Destino/Prefixo      | Next Hop      | Interface de Saída |
 |------------------------------|---------------|--------------------|
-| 2001:0DB8:ACAD:7300::/64     | 2001:0DB8:ACAD:FF::4:1 | Fa0/1   |
+| 2001:0DB8:ACAD:7300::/64     | 2001:0DB8:ACAD:73FF::4:1 | Fa0/1   |
 | 2001:0DB8:ACAD:7301::/64     | 2001:0DB8:ACAD:73FF::4:1 | Fa0/1   |
 | 2001:0DB8:ACAD:73FF::0:0/112 | 2001:0DB8:ACAD:73FF::4:1 | Fa0/1   |
 | 2001:0DB8:ACAD:73FF::1:0/112 | 2001:0DB8:ACAD:73FF::4:1 | Fa0/1   |
@@ -152,15 +151,15 @@
 | 2001:0DB8:ACAD:73FF::3:0/112 | 2001:0DB8:ACAD:73FF::4:1 | Fa0/1   |
 
 ## Topologia - Packet Tracer
-- [ ] ![Trabalho2-Topologia-NomeAluno](trabalho2-topologia-NomeAluno.pkt)
+- [ ] ![Trabalho2-Topologia-Karllyane](trabalho2-topologia-Karllyane.pkt)
 
 
 ## Arquivos de Configuração dos Dispositivos Intermediários (roteadores e switches)
-- [ ] ![Roteador Pato Branco](r-pb-nnn.pkt)
-- [ ] ![Roteador Francisco Beltrão](r-fb-nnn.pkt)
-- [ ] ![Roteador Vitorino](r-vit-nnn.pkt)
-- [ ] ![Roteador Itapejara D'Oeste](r-ita-nnn.pkt)
-- [ ] ![Roteador Coronel Vivida](r-cv-nnn.pkt)
-- [ ] ![Switch Pato Branco](sw-pb-nnn.pkt)
-- [ ] ![Switch Francisco Beltrão](sw-fb-nnn.pkt)
-- [ ] ![Switch Coronel Vivida](sw-cv-nnn.pkt)
+- [ ] ![Roteador Pato Branco](r-pb-kr.txt)
+- [ ] ![Roteador Francisco Beltrão](r-fb-kr.txt)
+- [ ] ![Roteador Vitorino](r-vit-kr.txt)
+- [ ] ![Roteador Itapejara D'Oeste](r-ita-kr.txt)
+- [ ] ![Roteador Coronel Vivida](r-cv-kr.txt)
+- [ ] ![Switch Pato Branco](sw-pb-kr.txt)
+- [ ] ![Switch Francisco Beltrão](sw-fb-kr.txt)
+- [ ] ![Switch Coronel Vivida](sw-cv-kr.txt)
